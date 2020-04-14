@@ -1,9 +1,14 @@
 Data types : int,string, null,undefined, boolean , object
 
-var   -- local and global both
-let  -- scope in block only where declared
-const  -- can't be changed
+specifier:
+          var   -- local and global both
+          let  -- scope in block only where declared
+          const  -- can't be changed
 
+
+Remember if some variable is declared inside function with var then it is local variable.
+if some variable is declared globally with var then it is global variable.
+if some variable is declared inside function without any specifier then it is global variable automatically.
 -----------------------------------------------------------------------------------------------------------------------------------
 
 Arithatic operator     + - * / ++ -- %
@@ -12,7 +17,7 @@ Bitwise operator       & | ~ ^ >> << <<<
 Comparison            == != < > <= >=
 Assignment operator
 ?:
-typeof         -->>  typeof(null) => object
+typeof         -->>  typeof null => object
               --->> other's type of same as their data type
               
 ----------------------------------------------------------------------------------------------------------------------------------
@@ -110,18 +115,19 @@ manipulate arrays with pop() :
                             arr.pop()  
                             
 
-manipulate arrays with shift() 
-manipulate arrays with unshift() 49:23
-shopping list 50:37
-write reusable code with functions 51:43
-passing values to functions with arguments 53:41
-global scope and functions 55:44
-local scope and functions 59:32
-understand undefined value returned from a function 1:03:56
-assignment with a returned value1:04:53
-stand in line 1:05:53
-boolean values 1:08:41
-use conditional logic with if statements 1:09:24
+manipulate arrays with shift()  :
+                            same as pop but removes from starting
+                            
+                            
+manipulate arrays with unshift() :
+                                  same as push but adds at starting
+                                  
+
+
+Local variable gets precedence over global variabe iflocal and global variable is of same name.
+
+
+
 comparison with the strict equality operator 1:13:20
 practice comparing different values 1:14:42
 comparison with inequality operator1:15:38
