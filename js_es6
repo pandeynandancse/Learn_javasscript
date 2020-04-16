@@ -1,4 +1,45 @@
+--------------------------------------------------------------------------------------------
 
+A method is a function stored as a property.
+
+var person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+
+objectName.propertyName    
+objectName["propertyName"]
+---------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+for/in statement loops through the properties of an object
+
+var person = {fname:"John", lname:"Doe", age:25}; 
+var x;
+for (x in person) {
+                   print(x)           ///// fname  lname   age
+                }
+
+
+
+
+
+
+
+
+
+for/of statement loops through the values of an iterable objects
 for of loop : 
                     inc = [1,2,3,4]
                     for (const i of inc )
