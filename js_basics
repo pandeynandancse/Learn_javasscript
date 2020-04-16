@@ -240,7 +240,7 @@ difference between the var and let and const keywords:
                                           // ouptuts pandey if name is printed
                                           //(let allows reassignment but not redeclaration)
                                        
-                                       c) const does not allow redeclaration and  reassignment
+                                       c) const does not allow redeclaration and  reassignment  of primitive data types such as boolean, strings(as show in example),int.
                                         
                                           const name = "nandan"
                                           const name = "pandey"    /// error
@@ -249,6 +249,12 @@ difference between the var and let and const keywords:
                                           const name="nandan"
                                           name = "pandey"   /// error
                                           
+                                          
+                                        ---->>>>>>  But we can update else mentioned above
+                                          eg. const dict = {}
+                                                  dict.firstName = 'nandan'   //// it is right and prints firstName:nandan
+                                                  
+                                                 
                                       d) var alows both redeclaration as well as reassignment
                                           
 
@@ -450,16 +456,159 @@ use destructuring assignment with the rest operator :
 create string using template literals(variable is interpreted as string inside literal) (variable inside string come up with $):  
                               ` hi! i m nandan and i have dog ${dog.name}'  /// hi i m nandan and i have dog quincy.
                               
+                  
+write concise object literal : (when variable name is same as key name)
+
+                                                            const createPerson = (name,age,gender) =>{
+                                                                                return {
+                                                                                             name : name,
+                                                                                             age : age,
+                                                                                             gender : gender
+                                                                                       };
+                                                                                  };
+
+                                                               createPerson("nandan", "22", "male");
+
+
+                                                               ---------------------------------
+                                                        new form:       
+                                                              const createPerson = (name,age,gender) =>( {  name, age, gender  }) ; 
+
+                                                  //// returns object as above
+
+                                                         
+                                        
+                                                                         
+use class syntax to define a constructor function :
+                                                  const createPerson = {
+                                                                       age:2,
+                                                                       setage : function(newage){
+                                                                                          this.age = newage;
+                                                                                }
+                                                                                      
+                                                                         };
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                 
+                                                    calling function : createPerson.setage(5) /// prints createPerson.age =2
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                              ------------------------------
+                                              new way:
+                                                            
+                                                            const createPerson = {
+                                                                       age:2,
+                                                                       setage(newage){
+                                                                                          this.age = newage;
+                                                                                }
+                                                                                      
+                                                                         };
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+Class and functon object:
+
+                                                  
+                                                            var createPerson = function(name) =>{
+                                                                                
+                                                                                             this.name = name;
+                                                                                            
+                                                                                          }
+                                                                                  
+                                                                         
+                                                                         
+                                                              var objectt = new createPerson("nandan")
+                                                                                              print(objectt.name)  // nandan
+                                                                                  
+                                                                                  
+                                                                                  
+                                   ---------------------------------------------------------
+                                   
+                                   
+                                   
+                                   
+                                                            class createPerson{
+                                                                                
+                                                                                constructor(name){
+                                                                                             this.name = name;
+                                                                                            
+                                                                                          }
+                                                                                  
+                                                                         }
+                                                                         
+                                                              var objectt = new createPerson("nandan")
+                                                                                              print(objectt.name)  // nandan
+                 
+                 
+                 
+             
+             
+             
+class inside function :
+                          
+                 
+use getters and setters to control access to an object :
+
+
+
+import and export : 
+                                        file1.js 
+                                                    var createPerson = function(name) =>{
+
+                                                                                  this.name = name;
+                                                                                    } 
+
+
+                                                    export var age = 12;  //// method of exporting variable
+                                                    export {createPerson};  //// method of exporting function
+
+
+                                        file2.js
+
+                                                  import {createPerson} from "./file1"      ///// where ./ means current directory
+
+
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+use * to import everything from a file :
+                              import * as somename from filename_with_path
                               
                               
-write concise object literal declarations using simple fields
-write concise declarative functions 3:12:24
-use class syntax to define a constructor function 3:12:59
-use getters and setters to control access to an object 3:15:10
-understanding the differences between import and require 3:20:25
-use export to reuse a code block 3:22:33
-use * to import everything from a file 3:23:40
-create an export fallback with export default 3:24:50
-import a default export 3:25:25
-Outro  3:26:18
-              
+                              
+                              
+                                         
+create an export fallback with export default:
+                              export default function subtract(x,y) {return x-y;}
+                        
+                        
+                        
+import a default export :(default export is importes without curly braces)
+                              import subract from filepath
+
+
+
+
+
