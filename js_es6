@@ -1,0 +1,82 @@
+
+for of loop : 
+                    inc = [1,2,3,4]
+                    for (const i of inc )
+                    {
+                              print(i)
+                    }
+                    
+                    
+                    
+                    
+                     inc = "nandan pandey"
+                    for (const i of inc )
+                    {
+                              print(i)
+                    }                                 ///// n a n d a n p a n d e y
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+    
+    
+    
+                   
+                   
+                   
+                   
+                   
+includes function : 
+                    array = [1,2,3,4]
+                    array.includes(0)     /// false     
+                   
+                    
+                    
+                    
+                    
+                    
+padstart(l,with_char) method :(pads with with_char such that given string becomes of length l)
+                       let val = "nandan"
+                       val.padstart(10 , 'a')  ///// aaaanandan
+
+
+
+
+                    eg2:
+                    
+                     let val = "nandan"
+                       val.padstart(6, 'a')  ///// error because string is of length 6 , no place for padding
+                        
+
+
+
+padend method : 
+               let val = "nandan"
+                       val.padend(10 , 'a')  ///// nandanaaaa
+
+
+
+
+
+
+
+
+async and await fuction;
+
+
+
+
+
+set :
+       const s = new Set([1,1,2,2,3]);
+       s.add(4)                         //// 1,2,3,4
+       s.delete(3)                      /// true , delete returns true if element is present in set for deletion
+       s.size                          //// 3
+       s.has(1)                        /// true
+       s.clear()
+       
+
+
